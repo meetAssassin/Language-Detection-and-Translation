@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airbnb</title>
+
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+  
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static',filename='styles.css') }}">
+    <!-- "{{ url_for('static',filename='styles/mainpage.css') }}" -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS link -->
+    <script src="https://kit.fontawesome.com/44071f0dee.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section class="coloured-section-1">
+
+        <div class="container-fluid">
+
+            <!--Nav Bar-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#"><i class="fa-brands fa-airbnb"></i> airbnb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">   
+                    <ul class="navbar-nav ms-auto">           <!--m: margin; s: start/left; auto: fills up maximum space it can-->
+                        <li class="nav-item">
+                          <a class="nav-link" href="#amenities">Amenities</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#slide-show">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#review">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Location</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Title -->
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="big-heading" id="title">Super Luxurious 3BHK Villa with Private Pool- EKOSTAY.</h1>
+                </div>
+                <div class="col-lg-6">
+                    <img class="title-img-2" id="tit-img" src="{{url_for('static', filename='images/image-1.jpg')}}">
+                    <!-- <img class="title-img-1" src="images/image-1.jpg" alt="resort-img"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="title-img-2">
+            <img class="title-img-2" src="{{url_for('static', filename='images/image-2.jpg')}}" alt="villa-img">
+            <!-- <img src="{{url_for('static', filename='Hermes.png')}}" align="middle" /> -->
+
+        </div>
+    </section>
+    
+    <section class="coloured-section-2" id="amenities">
+        <div class="row">
+            <div class="col-lg-6">    
+                <h1>Entire villa hosted by Alexander.</h1>
+                <br>
+                <p><i class="fa-solid fa-person-walking-luggage"></i> 14 Guests </p>
+                <p><i class="fa-solid fa-house"></i> 3 Bedrooms </p>
+                <p><i class="fa-solid fa-tv"></i> TV </p>
+                <p><i class="fa-solid fa-wifi"></i> Wi-Fi </p>
+                <p><i class="fa-solid fa-wind"></i> Air Conditioner </p>
+                <p><i class="fa-solid fa-table-tennis-paddle-ball"></i> Games </p>
+                <p><i class="fa-sharp fa-solid fa-water-ladder"></i> Private Pool </p>
+                <p><i class="fa-solid fa-utensils"></i> Kitchen </p>
+                <p><i class="fa-solid fa-mountain-sun"></i> Valley View</p>
+                <p><i class="fa-solid fa-car"></i> Free Parking </p>
+            </div>
+            <div class="col-lg-6 image-div">
+                <img class="title-img-3" src="{{url_for('static', filename='images/image-5.jpg')}}" alt="hotel-img">
+                
+        </div>
+    </div>
+</section>
+
+<!-- Slide Show -->
+                
+<section class="coloured-section-3" id="slide-show">
+    <div id="testimonial-carousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <img class="testimonial-image" src="{{url_for('static', filename='images/image-8.jpg')}}" alt="">
+            </div>
+            <div class="carousel-item active container-fluid">
+                <img class='testimonial-image' src="{{url_for('static', filename='images/image-4.jpg')}}" alt="">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="testimonial-image" src="{{url_for('static', filename='images/image-3.jpg')}}" alt="">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="testimonial-image" src="{{url_for('static', filename='images/image-6.jpg')}}" alt="">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="testimonial-image" src="{{url_for('static', filename='images/image-7.jpg')}}" alt="">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="testimonial-image" src="{{url_for('static', filename='images/image-9.jpg')}}" alt="">
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+</section>
+
+<!-- Reviews Section -->
+ <section class="review" id="review">
+  <h1>Review Section</h1>
+
+        <br>
+        <form id="language-detection" action="/predictandTranslate" method="post">
+            <div class="form-floating">
+                <textarea name="text" id="text" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Reviews</label>
+              </div>
+
+            <br>
+            <label class="res" for="lang">Select target language: </label>
+            <select name="lang" id="lang">
+                <div class="btn btn-outline-dark btn-group" role="group" aria-label="Basic outlined example">
+                    <option value="en" type="button" class="btn btn-outline-dark">English</option>
+                    <option value="es" type="button" class="btn btn-outline-dark">Spanish</option>
+                    <option value="fe" type="button" class="btn btn-outline-dark">French</option>
+                    <option value="de" type="button" class="btn btn-outline-dark">German</option>
+                    <option value="hi" type="button" class="btn btn-outline-dark">Hindi</option>
+                    <option value="mr" type="button" class="btn btn-outline-dark">Marathi</option>
+                    <option value="pa" type="button" class="btn btn-outline-dark">Punjabi</option>
+                </div>
+            </select>
+            <button type="submit" class="btn btn-outline-dark" name="action" value="detect">Translate Review</button>
+
+            <!-- <button type="submit" name="action" value="detect">Translate Review</button> -->
+        </form>
+        {% if pred %}
+        <div class="res">
+            <h6 class="res">Deceted Language: {{ pred }}</h6>
+        </div>
+        {% endif %}
+    
+           
+        {% if translation %}
+        <div class="res">
+            <h6 class="res">Translated text: {{ translation }}</h6>
+        </div>
+        {% endif %}
+
+
+ </section>    
+
+
+<!-- <button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i> Download</button>
+<button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play"></i> Download</button> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <i class="fa-footer fa-brands fa-twitter"></i>
+        <i class="fa-footer fa-brands fa-facebook"></i>
+        <i class="fa-footer fa-brands fa-instagram"></i>
+        <i class="fa-footer fa-solid fa-envelope"></i>  
+        <p>© airbnb </p>
+      </div>
+</footer>
+</html>
